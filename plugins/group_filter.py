@@ -172,10 +172,10 @@ async def auto_filter(client, msg, spoll=False):
         ]
 
     try:
-        btn.insert(0, [InlineKeyboardButton(text="CLICK HERE FOR OUR MOVIE GROUP, url='https://t.me/QUENTINTARANTINO_CG)])
+        btn.insert(0, [InlineKeyboardButton(text="CLICK HERE FOR OUR MOVIE GROUP", url='https://t.me/QUENTINTARANTINO_CG')])
     except KeyError:
         await save_group_settings(message.chat.id, 'auto_delete', True)
-        btn.insert(0, [InlineKeyboardButton(text="CLICK HERE FOR OUR MOVIE GROUP", url='https://t.me/QUENTINTARANTINO_CG)])
+        btn.insert(0, [InlineKeyboardButton(text="CLICK HERE FOR OUR MOVIE GROUP", url='https://t.me/QUENTINTARANTINO_CG')])
 
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
